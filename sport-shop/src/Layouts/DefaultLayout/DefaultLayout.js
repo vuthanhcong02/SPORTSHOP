@@ -4,8 +4,10 @@ import Header from '../components/Header';
 const cx = classNames.bind(styles)
 function DefaultLayout({children}) {
     return (  
-        <div classNames={cx('wrapper')}>
+        <div className={cx('wrapper')}>
+           <div className={cx('header')}>
             <Header/>
+           </div>
             <div className={cx('content')}>
                 {children}
             </div>

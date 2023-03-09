@@ -1,46 +1,62 @@
 import styles from './Header.module.scss';
 import classNames from 'classnames/bind';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import routeConfig from '../../../config/routes';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
-import { useState } from 'react';
+import { useState, useEffect} from 'react';
 const cx = classNames.bind(styles);
 
 function Header() {
-    const [activePage, setActivePage] = useState('home');
-    const handleAvtivePage = (page) => {
+    const location = useLocation()
+    //hook useLocation để lấy thông tin về URL hiện tại.
+    const [activePage, setActivePage] = useState(()=>{
+        const activeCurPage = localStorage.getItem('activePage')
+
+        return activeCurPage ? activeCurPage : 'home' 
+    });
+    const handleActivePage = (page) => {
         setActivePage(page);
+        localStorage.setItem('activePage',page)
     };
+    useEffect(() => {
+        const activeCurPage = localStorage.getItem('activePage')
+        if (activeCurPage) {
+            setActivePage(activeCurPage);
+        }
+        if(location.pathname===routeConfig.cart){
+            setActivePage('product')
+        }
+    }, [location.pathname]);
     return (
         <div className={cx('wrapper')}>
-            <div className={cx('title-shop')}>Sport shop</div>
+            <div className={cx('title-shop')}>Store</div>
             <ul className={cx('nav')}>
                 <Link
                     className={cx('menu', { active: activePage === 'home' })}
                     to={routeConfig.home}
-                    onClick={() => handleAvtivePage('home')}
+                    onClick={() => handleActivePage('home')}
                 >
                     Home
                 </Link>
                 <Link
                     className={cx('menu', { active: activePage === 'product' })}
                     to={routeConfig.product}
-                    onClick={() => handleAvtivePage('product')}
+                    onClick={() => handleActivePage('product')}
                 >
                     Product
                 </Link>
                 <Link
                     className={cx('menu', { active: activePage === 'about' })}
                     to={routeConfig.about}
-                    onClick={() => handleAvtivePage('about')}
+                    onClick={() => handleActivePage('about')}
                 >
                     About
                 </Link>
                 <Link
                     className={cx('menu', { active: activePage === 'contact' })}
                     to={routeConfig.contact}
-                    onClick={() => handleAvtivePage('contact')}
+                    onClick={() => handleActivePage('contact')}
                 >
                     Contact
                 </Link>
@@ -53,7 +69,7 @@ function Header() {
                         <button>
                             Cart
                             <FontAwesomeIcon className={cx('icon')} icon={faCartShopping} />
-                            <sup>0</sup>
+                            <sup>1</sup>
                         </button>
                     </Link>
                 </div>
