@@ -1,4 +1,3 @@
-import { Fragment } from 'react';
 import './ProductItem.css';
 const products = [
     {

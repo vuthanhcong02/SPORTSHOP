@@ -1,0 +1,16 @@
+.container.mt-3{
+    height: auto;
+} 
+.row{
+    margin: 0 2px !important;
+}
+.btn{
+    border: 1px solid crimson;
+}
+.container.mt-3.d-flex.border{
+    background-color: antiquewhite;
+}
+.border.border-dashed.p-3 {
+    border: 1px dashed;
+    background-color: aliceblue;
+}
