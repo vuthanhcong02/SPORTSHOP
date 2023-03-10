@@ -1,0 +1,29 @@
+.container.mt-3{
+    height: auto;
+    /* background-color: white; */
+    border-radius: 10px;
+}
+.img-fluid{
+    width: 150px;
+    color: gray;
+}
+.p-4.text-center.border.mt-2{
+    background-color: white;
+    border-radius: 10px;
+}
+.p-5.mt-3.pt-3 {
+    padding: 100px 200px !important;
+    background-color: white;
+    border-radius: 10px;
+}
+.btnGoto{
+    background-color: white;
+    border: 1px solid crimson;
+
+    padding: 8px 25px;
+    transition: all 0.5s ease-in-out;
+}
+.btnGoto:hover{
+    background-color: crimson;
+    color: white;
+}

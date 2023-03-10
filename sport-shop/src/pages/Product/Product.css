@@ -1,21 +1,29 @@
-.wrapper{
-    background-color:azure;
-    margin: 0 200px;
+.wrapper.container.mt-3{
+    background-color:white;
     height: 600px;
     overflow-y: scroll;
     border-radius: 10px;
     box-shadow: inset;
+    position: relative;
 }
-/* .col-3.p-3.m-2{
-    position: fixed;
-} 
+.col-3.p-3.m-2{
+}
+
 .col-8.p-3.m-1{
-    padding-left: 200px;
-} */
+    position: absolute;
+    margin-left: 400px !important;
+}
+.w-75.p-2{
+    border-radius: 20px;
+    border: 1px solid crimson;
+}
+.fs-4, .fs-5,.fs-6{
+    color: crimson;
+}
 .search{
     padding: 5px 60px 5px 25px;
     outline: none;
-    border: none;
+    border: 1px solid crimson;
     border-radius: 10px;
     overflow: hidden;
     
@@ -31,3 +39,4 @@
     transform: translate(-50%,-50%);
     cursor: pointer;
 }
+
