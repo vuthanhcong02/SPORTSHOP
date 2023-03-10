@@ -1,6 +1,7 @@
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Product.css'
+import ProductItem from './ProductItem/ProductItem';
 function Product() {
     return ( 
         <div className=" wrapper container mt-3">
@@ -43,7 +44,7 @@ function Product() {
 
                     </div>
                 </div>
-                <div className="col-8 p-3 m-1 ">
+                <div className="col-8 p-3 m-1">
                     <div className="d-flex justify-content-between">
                         <span className="fs-4">Hien thi san pham</span>
                         <div className="btn-search">
@@ -51,9 +52,13 @@ function Product() {
                             <FontAwesomeIcon  className="close" icon={faSearch}/>
                         </div>
                     </div>
-                    <div className="m-4 p-5 pt-3 border">
-
-                    </div>
+                    {/* <div className="m-3 p-5 pt-3 border">
+                    </div> */}
+                    <ProductItem/>
+                    <hr/>
+                    <ProductItem/>
+                    <hr/>
+                    <ProductItem/>
                 </div>
             </div>
         </div>

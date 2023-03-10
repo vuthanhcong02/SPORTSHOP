@@ -2,18 +2,27 @@
     background-color:azure;
     margin: 0 200px;
     height: 600px;
+    overflow-y: scroll;
     border-radius: 10px;
     box-shadow: inset;
 }
+/* .col-3.p-3.m-2{
+    position: fixed;
+} 
+.col-8.p-3.m-1{
+    padding-left: 200px;
+} */
 .search{
     padding: 5px 60px 5px 25px;
     outline: none;
     border: none;
     border-radius: 10px;
     overflow: hidden;
+    
 }
 .btn-search{
     position: relative;
+    overflow: hidden;
 }
 .close{
     position: absolute;
