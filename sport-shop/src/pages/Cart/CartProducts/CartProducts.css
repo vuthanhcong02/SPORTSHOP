@@ -14,3 +14,9 @@
     border: 1px dashed;
     background-color: aliceblue;
 }
+a.btn.btn-outline-danger {
+    transition: 0.5s all ease-in-out;
+}
+a.btn.btn-outline-danger:hover{
+    scale: 1.1;
+}

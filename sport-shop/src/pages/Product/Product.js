@@ -46,7 +46,7 @@ function Product() {
                             <span className="fs-5 fw-bold">Hiện thị sản phẩm</span>
                             <div className="btn-search">
                                 <input className="search" type="text" placeholder="Tìm kiếm..." />
-                                <FontAwesomeIcon className="close" icon={faSearch} />
+                                <FontAwesomeIcon className="searchicon" icon={faSearch} />
                             </div>
                         </div>
                         <hr className="hr" />

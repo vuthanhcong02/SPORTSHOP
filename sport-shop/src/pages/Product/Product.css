@@ -32,7 +32,8 @@
     position: relative;
     overflow: hidden;
 }
-.close{
+.searchicon{
+    color: crimson;
     position: absolute;
     top:50%;
     right: 10%;

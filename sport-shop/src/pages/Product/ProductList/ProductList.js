@@ -12,7 +12,7 @@ function ProductItem({products ,handleAdd}) {
                         <p className="decription">{product.decription}</p>
                     </div>
                     <div className="price col-3 d-flex justify-content-evenly flex-column">
-                        <span className="text-center fs-5">Giá : 10000000 VND</span>
+                        <span className="text-center fs-5">{product.price} VND</span>
                         <button className="btn btn-outline-danger" onClick={()=>handleAdd(product)}>Thêm vào giỏ hàng</button>
                     </div>
                     <hr/>
