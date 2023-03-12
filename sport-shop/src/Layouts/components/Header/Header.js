@@ -4,7 +4,8 @@ import { Link, useLocation } from 'react-router-dom';
 import routeConfig from '../../../config/routes';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
-import { useState, useEffect} from 'react';
+import { useState, useEffect, useContext} from 'react';
+import { CartContext } from '../../DefaultLayout/DefaultLayout';
 const cx = classNames.bind(styles);
 
 function Header() {
@@ -28,6 +29,7 @@ function Header() {
             setActivePage('product')
         }
     }, [location.pathname]);
+    const {cartItems}=useContext(CartContext)
     return (
         <div className={cx('wrapper')}>
             <div className={cx('title-shop')}>Store</div>
@@ -62,14 +64,14 @@ function Header() {
                 </Link>
             </ul>
             <div className={cx('btn-action')}>
-                <button>Login</button>
-                <button>Sign-up</button>
+                <button className="btn btn-outline-danger">Login</button>
+                <button className="btn btn-outline-danger">Sign-up</button>
                 <div className={cx('btn-cart')}>
                     <Link to={routeConfig.cart}>
-                        <button>
+                        <button className="btn btn-outline-danger">
                             Cart
                             <FontAwesomeIcon className={cx('icon')} icon={faCartShopping} />
-                            <sup>1</sup>
+                            <sup>{cartItems.length}</sup>
                         </button>
                     </Link>
                 </div>

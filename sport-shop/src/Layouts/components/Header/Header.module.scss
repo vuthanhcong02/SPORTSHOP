@@ -34,14 +34,15 @@
         margin-right: 10px;  
         border: none;
         outline: none;
-        background-color:crimson;
-        color: white;
+        border: 1px solid crimson;
+        // background-color:crimson;
+        color:crimson;
         font-weight: 500;
         padding: 8px 15px; 
         border-radius: 10px;
         transition: 0.5s all ease-in-out;
         &:hover{
-            scale: 1.2;
+            scale: 1.1;
         }
     }
 }
@@ -61,7 +62,7 @@
    
 }
 sup{
-    font-size: 15px;
+    font-size: 16px !important;
     margin-left: 5px;
-    color:black;
+    color:crimson;
 }

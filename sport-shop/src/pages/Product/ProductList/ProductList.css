@@ -1,0 +1,7 @@
+button.btn.btn-outline-danger {
+    border: 1px solid crimson;
+    transition: 0.5s all ease-in-out;
+}
+button.btn.btn-outline-danger:hover{
+    scale: 1.1;
+}
