@@ -8,8 +8,14 @@ import { useContext } from 'react';
 import { CartContext } from '../../Layouts/DefaultLayout/DefaultLayout';
 import CartProducts from './CartProducts/CartProducts';
 function Cart() {
-    const { cartItems } = useContext(CartContext);
-    console.log(cartItems)
+    const { cartItems,increaseQuantity,decreaseQuantity} = useContext(CartContext);
+    function handleCountUp(product) {
+        increaseQuantity(product);
+      }
+    const handleCountDown = (product)=>{
+        decreaseQuantity(product)
+    }  
+    console.log(handleCountUp)
     return (
         <div className="container mt-3">
             <div className="p-4 text-center mt-2 border">
@@ -28,7 +34,7 @@ function Cart() {
                 </>
             ) : (
                 <>
-                    <CartProducts products={cartItems}/>
+                    <CartProducts products={cartItems} handleCountUp={handleCountUp} handleCountDown={handleCountDown}/>
                 </>
             )}
         </div>

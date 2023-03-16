@@ -1,7 +1,7 @@
 import './CartProducts.css'
 import { Link } from 'react-router-dom';
 import routeConfig from '../../../config/routes';
-function CartProducts({products}) {
+function CartProducts({products,handleCountUp,handleCountDown}) { 
     return(
         <div className="container mt-3 d-flex border">
             <div className="col-8 p-3 mt-3">
@@ -25,14 +25,14 @@ function CartProducts({products}) {
                         <div className="row d-flex align-items-center">
                             <span className="col-3">Số lượng : </span>
                             <div className="count col-9">
-                                <button className="btn btn-outline-dark">-</button>
-                                <span className="p-2">1</span>
-                                <button className="btn btn-outline-dark">+</button>
+                                <button className="btn btn-outline-dark" onClick={()=>handleCountDown(product)}>-</button>
+                                <span className="p-2">{product.quantity}</span>
+                                <button className="btn btn-outline-dark" onClick={()=>handleCountUp(product)}>+</button>
                             </div>
                         </div>
                         <div className="row">
                             <span className="col-3">Tổng cộng : </span>
-                            <span className="col-9">10000000</span>
+                            <span className="col-9">{product.price*product.quantity}</span>
                         </div>
                     </div>
                     <hr/>
