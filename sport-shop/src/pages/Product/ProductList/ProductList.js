@@ -1,4 +1,5 @@
 import './ProductList.css';
+import { memo } from 'react';
 function ProductItem({products ,handleAdd}) {
     return (
         <>
@@ -22,4 +23,4 @@ function ProductItem({products ,handleAdd}) {
     );
 }
 
-export default ProductItem;
+export default memo(ProductItem);

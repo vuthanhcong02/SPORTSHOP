@@ -33,7 +33,7 @@ const products = [
 ];
 
 function Product() {
-    const { addToCart } = useContext(CartContext);
+    const { addToCart,cartItems } = useContext(CartContext);
     function handleAdd(product) {
         addToCart(product);
       }
@@ -50,7 +50,7 @@ function Product() {
                             </div>
                         </div>
                         <hr className="hr" />
-                        <ProductList products={products} handleAdd={handleAdd}/>
+                        <ProductList products={products} handleAdd={handleAdd} cartItems={cartItems} />
                     </div>
                 </div>
             </div>

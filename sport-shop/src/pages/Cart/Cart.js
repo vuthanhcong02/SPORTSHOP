@@ -4,18 +4,20 @@ import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import routeConfig from '../../config/routes';
 import './CartProducts/CartProducts.css'
-import { useContext } from 'react';
+import { useContext,memo} from 'react';
 import { CartContext } from '../../Layouts/DefaultLayout/DefaultLayout';
 import CartProducts from './CartProducts/CartProducts';
 function Cart() {
-    const { cartItems,increaseQuantity,decreaseQuantity} = useContext(CartContext);
+    const { cartItems,increaseQuantity,decreaseQuantity,deleteProduct,total} = useContext(CartContext);
     function handleCountUp(product) {
         increaseQuantity(product);
       }
     const handleCountDown = (product)=>{
         decreaseQuantity(product)
     }  
-    console.log(handleCountUp)
+    const handleDelete =(product)=>{
+        deleteProduct(product)
+    }
     return (
         <div className="container mt-3">
             <div className="p-4 text-center mt-2 border">
@@ -34,11 +36,11 @@ function Cart() {
                 </>
             ) : (
                 <>
-                    <CartProducts products={cartItems} handleCountUp={handleCountUp} handleCountDown={handleCountDown}/>
+                    <CartProducts products={cartItems} handleCountUp={handleCountUp} handleCountDown={handleCountDown} handleDelete={handleDelete} totalPrice={total}/>
                 </>
             )}
         </div>
     );
 }
 
-export default Cart;
+export default memo(Cart);
