@@ -66,3 +66,11 @@ sup{
     margin-left: 5px;
     color:crimson;
 }
+.box{
+    font-size: 12px;
+    max-height: 400px;
+    overflow-y: auto;
+    width: 350px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}

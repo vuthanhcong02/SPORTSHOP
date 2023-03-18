@@ -10,7 +10,7 @@ function CartProducts({products,handleCountUp,handleCountDown,handleDelete,total
             <div className="col-7 p-3 mt-3">
                 <div>
                     <span>Sản Phẩm</span>
-                    <hr/>
+                    <div className="hr mt-3"></div>
                 </div>
                 {products.map((product)=>(
                     <div className="row" key={product.id}>
@@ -39,7 +39,7 @@ function CartProducts({products,handleCountUp,handleCountDown,handleDelete,total
                             <button className="btn-delete btn btn-outline-danger col" onClick={()=>handleDelete(product)}>Xóa sản phẩm</button>
                         </div>
                     </div>
-                    <hr/>
+                    <div className="hr"></div>
                 </div>
                 ))}
             </div>
@@ -47,14 +47,14 @@ function CartProducts({products,handleCountUp,handleCountDown,handleDelete,total
                 <div className="border border-dashed p-3">
                 <div>
                     <span>Đơn Hàng</span>
-                    <hr/>
+                    <div className="hr mt-3"></div>
                 </div>
                 <div className="row">
-                    <div className="row">
-                        <span className="col-6">Tổng số sản phẩm : </span>
+                    <div className="row mt-3">
+                        <span className="col-6 ">Tổng số sản phẩm : </span>
                         <span className="col-6">{products.length}</span>
                     </div>
-                    <hr className="mt-3"/>
+                    <div className="hr mt-3"></div>
                     {/* <div className="row mt-3 p-2">
                         <span className="col text-center">Mã sản phẩm</span>
                         <span className="col text-center">Số lượng</span>
@@ -93,14 +93,14 @@ function CartProducts({products,handleCountUp,handleCountDown,handleDelete,total
                             </select>
                         </div>
                     </div>
+                    <div className="hr mt-3"></div>
                     <div className="row mt-3 p-2">
                         <span className="col-6">Tổng cộng : </span>
                         <span className="col-6">{totalPrice}</span>
                     </div>
-                    <hr className="mt-3"/>
-                    <div className="d-flex justify-content-evenly align-items-center mt-3">
-                        <Link to={routeConfig.product} className="btn btn-outline-danger">Tiếp tục mua hàng</Link>
-                        <button className="btn btn-outline-danger" >Tiến hành đặt hàng</button>
+                    <div className="row d-flex justify-content-evenly align-items-center mt-3">
+                        <Link to={routeConfig.product} className="btn btn-outline-danger col">Tiếp tục mua hàng</Link>
+                        <button className="btn btn-outline-danger col" >Tiến hành đặt hàng</button>
                     </div>
                 </div>
                 </div>

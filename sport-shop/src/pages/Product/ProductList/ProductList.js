@@ -4,7 +4,7 @@ function ProductItem({products ,handleAdd}) {
     return (
         <>
             {products.map((product,index) => (
-                <div key={product.id}className="m-3 p-2 pt-3 row container">
+                <div key={product.id}className=" p-2 pt-3 row container d-flex justify-content-center align-items-center">
                     <div className="img col-3 ">
                         <img className="img-thumbnail" src={product.image} alt="" />
                     </div>
@@ -16,7 +16,7 @@ function ProductItem({products ,handleAdd}) {
                         <span className="text-center fs-5">{product.price} VND</span>
                         <button className="btn btn-outline-danger" onClick={()=>handleAdd(product)}>Thêm vào giỏ hàng</button>
                     </div>
-                    <hr/>
+                    <div className="hr mt-3"></div>
                 </div>
                 ))}
         </>

@@ -20,3 +20,8 @@ a.btn.btn-outline-danger {
 a.btn.btn-outline-danger:hover{
     scale: 1.1;
 }
+.hr{
+    width: auto;
+    height: 1px;
+    background-color: gray;
+}

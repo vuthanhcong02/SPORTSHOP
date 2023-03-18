@@ -1,7 +1,11 @@
 import styles from './DefaultLayout.module.scss'
 import classNames from 'classnames/bind'
 import Header from '../components/Header';
+// application.scss
+
 import { useState,createContext } from 'react';
+import Toastify from 'toastify-js'
+import "toastify-js/src/toastify.css"
 const cx = classNames.bind(styles)
 export const CartContext = createContext();
 function DefaultLayout({children}) {
@@ -16,10 +20,32 @@ function DefaultLayout({children}) {
         product.id === newProduct.id ? { ...product, quantity: product.quantity + 1 } : product
       );
       setCartItems(updatedCartItems);
-      console.log("Existing item:", existingItem);
-      console.log("Cart items:", updatedCartItems);
       const updateTotal= updatedCartItems.reduce((total,item)=>total+(item.price*item.quantity),0)
       setTotal(updateTotal)
+      // alert('Sản phẩm đã có trong giỏ hàng.')
+      // Display an info toast with no title
+      Toastify({
+        text: "Sản phẩm đã có trong giỏ hàng !",
+        duration: 3000,
+        destination: "",
+        newWindow: false,
+        close: false,
+        offset: {
+          x: 10, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
+          y: 85 // vertical axis - can be a number or a string indicating unity. eg: '2em'
+        },
+        gravity: "top", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+          background:"#FFA500", 
+          padding:"20px 40px",
+          borderRadius:"10px",
+          fontWeight:"600",        
+        },
+        onClick: function(){} // Callback after click
+      }).showToast();
+    
     } else {
       // Nếu sản phẩm chưa có trong giỏ hàng, thêm sản phẩm mới vào giỏ hàng
       const updatedCartItems = [...cartItems, { ...newProduct, quantity: 1 }];
@@ -27,9 +53,30 @@ function DefaultLayout({children}) {
       console.log("New item:", newProduct);
       console.log("Cart items:", updatedCartItems);
       setTotal((prevTotal) => prevTotal + newProduct.price);
+      Toastify({
+        text: "Sản phẩm đã được thêm vào giỏ hàng.",
+        duration: 3000,
+        destination: "",
+        newWindow: false,
+        close: false,
+        offset: {
+          x: 10, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
+          y: 85 // vertical axis - can be a number or a string indicating unity. eg: '2em'
+        },
+        gravity: "top", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+          background:"linear-gradient(to right, #00b09b, #96c93d)", 
+          padding:"20px 40px",
+          borderRadius:"10px",
+          fontWeight:"600",        
+        },
+        onClick: function(){} // Callback after click
+      }).showToast();
   
-    }
-    }
+  }
+}
     const increaseQuantity = (productId)=>{
 
       const index = cartItems.findIndex((item) => item.id === productId.id);
