@@ -3,7 +3,7 @@ import classNames from 'classnames/bind';
 import { Link, useLocation } from 'react-router-dom';
 import routeConfig from '../../../config/routes';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
+import { faCartShopping, faClose } from '@fortawesome/free-solid-svg-icons';
 import { useState, useEffect, useContext} from 'react';
 import { CartContext } from '../../DefaultLayout/DefaultLayout';
 import Tippy from '@tippyjs/react/headless';
@@ -30,7 +30,7 @@ function Header() {
             setActivePage('product')
         }
     }, [location.pathname]);
-    const {cartItems,total}=useContext(CartContext)
+    const {cartItems,total ,deleteProduct}=useContext(CartContext)
     console.log("cart: ",cartItems)
     return (
         <div className={cx('wrapper')}>
@@ -85,13 +85,13 @@ function Header() {
                                            <span>{item.price}</span>
                                        </div>
                                    </div>
-                                   <div className="col-4">
+                                   <div className="col-3">
                                        <img className="img-fluid" src={item.image} alt=""/>
                                    </div>
+                                   <button  className={cx('btn-close')} onClick={()=>deleteProduct(item)}><FontAwesomeIcon icon={faClose}/></button>
                               </div>
                               <hr/>
                            </div>
-                   
                           ))}
                         <div className=" row d-flex align-items-center mt-2">
                                    <span className="col">TỔNG CỘNG</span>
