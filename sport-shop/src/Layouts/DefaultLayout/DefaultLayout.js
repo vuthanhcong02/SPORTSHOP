@@ -117,7 +117,7 @@ function DefaultLayout({children}) {
     return (  
         <div className={cx('wrapper')}>
            <div className={cx('header')}>
-           <CartContext.Provider value={{cartItems}}> 
+           <CartContext.Provider value={{cartItems,total}}> 
             <Header/>
            </CartContext.Provider >
            </div>

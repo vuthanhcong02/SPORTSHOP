@@ -30,7 +30,7 @@ function Header() {
             setActivePage('product')
         }
     }, [location.pathname]);
-    const {cartItems}=useContext(CartContext)
+    const {cartItems,total}=useContext(CartContext)
     console.log("cart: ",cartItems)
     return (
         <div className={cx('wrapper')}>
@@ -68,51 +68,56 @@ function Header() {
             <div className={cx('btn-action')}>
                 <button className="btn btn-outline-danger">Login</button>
                 <button className="btn btn-outline-danger">Sign-up</button>
+               {
+                cartItems.length>0&&
                 <Tippy  interactive={true} placement='bottom-end' appendTo={document.body}
-                 render={attrs => (
-                    <div className={cx('box')} tabIndex="-1" {...attrs}>
-                        <div className="row p-3 d-flex flex-column justify-content-between">
-                           {cartItems.map((item)=>(
-                            <div key={item.id} >
-                               <div className="d-flex align-items-center justify-content-between">
-                                    <div className="col-8">
-                                        <span>{item.name}</span>
-                                        <div className="d-flex justify-content-evenly align-items-center">
-                                            <span>{item.quantity}</span>
-                                            <span>x</span>
-                                            <span>{item.price}</span>
-                                        </div>
-                                    </div>
-                                    <div className="col-4">
-                                        <img className="img-fluid" src={item.image} alt=""/>
-                                    </div>
-                               </div>
-                               <hr/>
-                            </div>
-                    
-                           ))}
-                           <div className=" row d-flex align-items-center mt-2">
-                                <span className="col">Tong cong</span>
-                                <span className="col">1000000</span>
+                render={attrs => (
+                   <div className={cx('box')} tabIndex="-1" {...attrs}>
+                       <div className="cart-tippy row p-3 d-flex flex-column justify-content-between">
+                          {cartItems.map((item)=>(
+                           <div key={item.id} >
+                              <div className="d-flex align-items-center justify-content-between">
+                                   <div className="col-8">
+                                       <span>{item.name}</span>
+                                       <div className="d-flex justify-content-evenly align-items-center">
+                                           <span>{item.quantity}</span>
+                                           <span>x</span>
+                                           <span>{item.price}</span>
+                                       </div>
+                                   </div>
+                                   <div className="col-4">
+                                       <img className="img-fluid" src={item.image} alt=""/>
+                                   </div>
+                              </div>
+                              <hr/>
                            </div>
-                           <div className="row d-flex align-items-center mt-3">
-                                <button className="col btn btn-outline-danger">Gio hang</button>
-                                <button className="col btn btn-outline-danger">dat hang</button>
-                           </div>
+                   
+                          ))}
+                        <div className=" row d-flex align-items-center mt-2">
+                                   <span className="col">TỔNG CỘNG</span>
+                                   <span className="col">{total} VND</span>
                         </div>
-                    </div>
-                  )}
-                >
-                    <div className={cx('btn-cart')}>
-                            <Link to={routeConfig.cart}>
-                                <button className="btn btn-outline-danger">
-                                    Cart
-                                    <FontAwesomeIcon className={cx('icon')} icon={faCartShopping} />
-                                    <sup>{cartItems.length}</sup>
-                                </button>
-                            </Link>
-                    </div>
-                </Tippy>
+                        <div className=" d-flex align-items-center mt-3 justify-content-evenly">
+                                   <Link  to={routeConfig.cart} className=" btn btn-outline-danger">Giỏ hàng</Link>
+                                   <button className=" btn btn-outline-danger">Đặt hàng</button>
+                        </div>
+                       </div>
+                   </div>
+                 )}
+               >
+                
+                   <div className={cx('btn-cart')}>
+                           <Link to={routeConfig.cart}>
+                               <button className="btn btn-outline-danger">
+                                   Cart
+                                   <FontAwesomeIcon className={cx('icon')} icon={faCartShopping} />
+                                   <sup>{cartItems.length}</sup>
+                               </button>
+                           </Link>
+                   </div>
+               </Tippy>
+
+               }
             </div>
         </div>
     );

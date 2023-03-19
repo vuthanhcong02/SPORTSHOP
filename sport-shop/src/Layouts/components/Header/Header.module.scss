@@ -68,9 +68,16 @@ sup{
 }
 .box{
     font-size: 12px;
-    max-height: 400px;
+    max-height: 350px;
     overflow-y: auto;
-    width: 350px;
+    width: 300px;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+.d-flex.align-items-center.justify-content-between{
+    &:hover{
+        background-color: grey;
+        cursor: pointer;
+    }
 }
