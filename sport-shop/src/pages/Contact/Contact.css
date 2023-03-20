@@ -13,7 +13,6 @@
     color: crimson;
 }
 .contact-logo{
-    margin-left: 50px;
 }
 .contact-main{
     padding: 0 100px !important;
@@ -23,17 +22,8 @@
 }
 .footer-contact{
     height: 150px;
-    background-color: gray;
-    margin: 0 100px !important;
+    background-color:#ddd;
 }
 .title-footer-contact{
-    margin: 0 150px;
-}
-.title-footer-contact input{
-    height: 45px;
-    width: 300px;
-    border-radius: 10px;
-    border: 1px solid crimson;
-    outline: none;
-    padding: 5px 15px;
+    margin: 0 100px;
 }

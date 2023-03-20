@@ -36,7 +36,7 @@ function Contact() {
                     </div>
                     <div className="mb-3 mt-3">
                         <label for="exampleFormControlInput1" className="form-label">HỌ VÀ TÊN</label>
-                        <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="Enter your name"/>
+                        <input type="" className="form-control" id="exampleFormControlInput1" placeholder="Enter your name"/>
                     </div>
                     <div className="mb-3 mt-3">
                         <label for="exampleFormControlInput1" className="form-label">EMAIL</label>
@@ -44,7 +44,7 @@ function Contact() {
                     </div>
                     <div className="mb-3 mt-3">
                         <label for="exampleFormControlInput1" className="form-label">ĐIỆN THOẠI</label>
-                        <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="Enter your phone"/>
+                        <input type="" className="form-control" id="exampleFormControlInput1" placeholder="Enter your phone"/>
                     </div>
                     <div className="mb-3">
                         <label for="exampleFormControlTextarea1" className="form-label">NỘI DUNG</label>
@@ -54,17 +54,6 @@ function Contact() {
                         <button className="btn btn-outline-danger w-100">Gửi</button>
                     </div>
                 </div>
-            </div>
-            <div className="footer-contact d-flex justify-content-between p-3 m-4 align-items-center row ">
-               <di className="title-footer-contact col">
-                    <h4>
-                        ĐĂNG KÍ NHẬN KHUYẾN MÃI
-                    </h4>
-               </di>
-               <div className="title-footer-contact col d-flex justify-content-center align-items-center">
-                    <input type="text" placeholder="Nhập email của bạn"/>
-                    <button className="btn btn-outline-danger">Gửi</button>
-               </div>
             </div>
         </div>
     );

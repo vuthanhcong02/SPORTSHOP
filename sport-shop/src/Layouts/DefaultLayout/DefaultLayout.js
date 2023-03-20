@@ -6,6 +6,7 @@ import Header from '../components/Header';
 import { useState,createContext } from 'react';
 import Toastify from 'toastify-js'
 import "toastify-js/src/toastify.css"
+import Footer from '../components/Footer/Footer';
 const cx = classNames.bind(styles)
 export const CartContext = createContext();
 function DefaultLayout({children}) {
@@ -127,7 +128,7 @@ function DefaultLayout({children}) {
                  </CartContext.Provider>
             </div>
             <div className="footer">
-                
+                <Footer/>
             </div>
         </div>
     );

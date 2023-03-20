@@ -1,11 +1,16 @@
 .about{
-    height: 400px;
+    height: auto;
     background-color: white;
-    margin: 10px 150px;
+    margin: 10px 110px;
 }
 .history h4{
     background-color: gray;
 }
 .history{
     background-color: #ddd;
+    margin: 0 10px;
+}
+h4,h5,h6{
+    text-transform: uppercase;
+    color: crimson;
 }
