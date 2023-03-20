@@ -1,28 +1,106 @@
 import './About.css'
 function About() {
     return ( 
-        <div className="container p-2">
-            <div className="title p-3 border">
-                <h1 className="text-center p-3">About US</h1>
+        <div className="about">
+            <h4 className="mt-4 p-3">GIOI THIEU</h4>
+            <div className="row">
+                <img  className="img-fluid col-5" src="https://s3-ap-southeast-1.amazonaws.com/thietkeshopdanang.com/wp-content/uploads/2020/03/11194408/bat-mi-cach-thiet-ke-shop-giay-thao-don-gian-nhung-hieu-qua2.jpeg" alt=""/>
+                <div className="col-7 ">
+                    <h5>Gioi thieu chung</h5>
+                    <p className="">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit ab itaque perferendis commodi! Molestiae dolorem rerum sapiente! Veritatis temporibus dolore mollitia nobis fugit voluptates voluptatem repudiandae ipsam inventore. Dicta, dolore!
+                    </p>
+                    <p className="">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit ab itaque perferendis commodi! Molestiae dolorem rerum sapiente! Veritatis temporibus dolore mollitia nobis fugit voluptates voluptatem repudiandae ipsam inventore. Dicta, dolore!
+                    </p>
+                    <p className="">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit ab itaque perferendis commodi! Molestiae dolorem rerum sapiente! Veritatis temporibus dolore mollitia nobis fugit voluptates voluptatem repudiandae ipsam inventore. Dicta, dolore!
+                    </p>
+                </div>
             </div>
-            <div className="content p3">
-                <div className="bg-img row d-flex justify-content-center">
-                    <div className="col d-flex border">
-                        <img className="img-fluid object-fit-cover h-100 w-75" src="https://msmobile.com.vn/upload_images/images/hinh-nen-powerpoint-dep-nhat-2017-1.jpg" alt=""/>
+            <div className="row mt-3">
+                <div className="col-5">
+                    <h6>Tam nhin</h6>
+                    <p className="">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit ab itaque perferendis commodi! Molestiae dolorem rerum sapiente! Veritatis temporibus dolore mollitia nobis fugit voluptates voluptatem repudiandae ipsam inventore. Dicta, dolore!
+                    </p>
+                </div>
+                <div className="col-7">
+                    <h6>Su menh</h6>
+                    <p className="">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit ab itaque perferendis commodi! Molestiae dolorem rerum sapiente! Veritatis temporibus dolore mollitia nobis fugit voluptates voluptatem repudiandae ipsam inventore. Dicta, dolore!
+                    </p>
+                </div>
+            </div>
+            <div className="history">
+                <h4 className="text-center mt-3 p-5">Lich su phat trien</h4>
+                <div className="row mt-4">
+                    <div className="col row">
+                        <img className="col-4 img-fluid" src="https://tse3.mm.bing.net/th?id=OIP.1MLUal5IFBCUe6Ib9lw8gwHaEn&pid=Api&P=0" alt=""/>
+                        <div className="col-8">
+                            <h6>2020</h6>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit ab itaque perferendis commodi! Molestiae dolorem rerum sapiente! Veritatis temporibus dolore mollitia nobis fugit voluptates voluptatem repudiandae ipsam inventore. Dicta, dolore!
+                        </div>
                     </div>
-                    <div className="col p-3 border">
-
+                    <div className="col row">
+                    <img className="col-4 img-fluid" src="https://specials-images.forbesimg.com/imageserve/5f9b1dec850bdec536aeb8a3/960x0.jpg?fit=scale" alt=""/>
+                        <div className="col-8">
+                        <h6>2021</h6>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit ab itaque perferendis commodi! Molestiae dolorem rerum sapiente! Veritatis temporibus dolore mollitia nobis fugit voluptates voluptatem repudiandae ipsam inventore. Dicta, dolore!
+                        </div>
                     </div>
                 </div>
-                <div className="row">
-                        <div className="col">
-                            <h5>Thach thuc</h5>
-                            <span>abcxyz</span>
-                        </div>
-                        <div className="col">
-
+                <div className="row mt-4">
+                    <div className="col row">
+                        <img className="col-4 img-fluid" src="https://p.motionelements.com/stock-video/signs-symbols/me346918-year-hd-a0540.jpg" alt=""/>
+                        <div className="col-8">
+                        <h6>2022</h6>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit ab itaque perferendis commodi! Molestiae dolorem rerum sapiente! Veritatis temporibus dolore mollitia nobis fugit voluptates voluptatem repudiandae ipsam inventore. Dicta, dolore!
                         </div>
                     </div>
+                    <div className="col row">
+                    <img className="col-4 img-fluid" src="https://media.istockphoto.com/illustrations/gold-number-new-year-2023-on-white-background-illustration-id679535910?k=6&m=679535910&s=612x612&w=0&h=j0qA8W7_4L9prlc96fL5aJ_4_BmOHKjabdJXu1CYYhU=" alt=""/>
+                        <div className="col-8">
+                        <h6>2023</h6>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit ab itaque perferendis commodi! Molestiae dolorem rerum sapiente! Veritatis temporibus dolore mollitia nobis fugit voluptates voluptatem repudiandae ipsam inventore. Dicta, dolore!
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="history">
+                <h4 className="text-center mt-3 p-5">Gia tri cot loi</h4>
+                <div className="row mt-4">
+                    <div className="col row">
+                        <img className="col-4 img-fluid" src="https://tse3.mm.bing.net/th?id=OIP.1MLUal5IFBCUe6Ib9lw8gwHaEn&pid=Api&P=0" alt=""/>
+                        <div className="col-8">
+                            <h6>2020</h6>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit ab itaque perferendis commodi! Molestiae dolorem rerum sapiente! Veritatis temporibus dolore mollitia nobis fugit voluptates voluptatem repudiandae ipsam inventore. Dicta, dolore!
+                        </div>
+                    </div>
+                    <div className="col row">
+                    <img className="col-4 img-fluid" src="https://specials-images.forbesimg.com/imageserve/5f9b1dec850bdec536aeb8a3/960x0.jpg?fit=scale" alt=""/>
+                        <div className="col-8">
+                        <h6>2021</h6>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit ab itaque perferendis commodi! Molestiae dolorem rerum sapiente! Veritatis temporibus dolore mollitia nobis fugit voluptates voluptatem repudiandae ipsam inventore. Dicta, dolore!
+                        </div>
+                    </div>
+                </div>
+                <div className="row mt-4">
+                    <div className="col row">
+                        <img className="col-4 img-fluid" src="https://p.motionelements.com/stock-video/signs-symbols/me346918-year-hd-a0540.jpg" alt=""/>
+                        <div className="col-8">
+                        <h6>2022</h6>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit ab itaque perferendis commodi! Molestiae dolorem rerum sapiente! Veritatis temporibus dolore mollitia nobis fugit voluptates voluptatem repudiandae ipsam inventore. Dicta, dolore!
+                        </div>
+                    </div>
+                    <div className="col row">
+                    <img className="col-4 img-fluid" src="https://media.istockphoto.com/illustrations/gold-number-new-year-2023-on-white-background-illustration-id679535910?k=6&m=679535910&s=612x612&w=0&h=j0qA8W7_4L9prlc96fL5aJ_4_BmOHKjabdJXu1CYYhU=" alt=""/>
+                        <div className="col-8">
+                        <h6>2023</h6>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit ab itaque perferendis commodi! Molestiae dolorem rerum sapiente! Veritatis temporibus dolore mollitia nobis fugit voluptates voluptatem repudiandae ipsam inventore. Dicta, dolore!
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );

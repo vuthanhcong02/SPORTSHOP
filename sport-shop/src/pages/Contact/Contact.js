@@ -25,7 +25,7 @@ function Contact() {
                        <div className="mail-icon ">
                             <FontAwesomeIcon icon={faEnvelope}/>  
                         </div > 
-                        <a href="https://mail.google.com/"className="text">congvtc02@gmail.com</a>    
+                        <a href="https://mail.google.com/" target="blank" className="text">congvtc02@gmail.com</a>    
                     </div>
                 </div>
             </div>
