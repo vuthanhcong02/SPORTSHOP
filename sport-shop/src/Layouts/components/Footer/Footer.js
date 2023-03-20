@@ -54,33 +54,41 @@ function Footer() {
                             <p>Mon - Sun / 9:00AM - 8:00PM</p>
                         </div>
                    </div >
-                   <div className="d-flex flex-column col-3">
-                        <h5>Tiện ích</h5>
-                        <div className="d-flex flex-column">
-                            <Link className={cx('menu')} to={routeConfig.home}>Home</Link>
+                   <di className="col-7 row">
+                       <div className="d-flex flex-column col-4">
+                            <h5>Tiện ích</h5>
+                            <div className="d-flex flex-column">
+                                <Link className={cx('menu')} to={routeConfig.home}>Home</Link>
+                            </div>
+                            <div className="d-flex flex-column">
+                                <Link className={cx('menu')} to={routeConfig.product}>Product</Link>
+                            </div>
+                            <div className="d-flex flex-column">
+                                <Link className={cx('menu')} to={routeConfig.about}>About</Link>
+                            </div>
+                            <div className="d-flex flex-column">
+                                <Link  className={cx('menu')}to={routeConfig.contact}>Contact</Link>
+                            </div>
+                       </div >
+                        <div className="d-flex flex-column col-3">
+                            <h5>Chính sách</h5>
+                            <div className="d-flex flex-column">
+                                <Link className={cx('pay')}>Hướng dẫn thanh toán</Link>
+                            </div>
+                            <div className="d-flex flex-column">
+                                <Link className={cx('pay')}>Chính sách đổi trả hàng</Link>
+                            </div>
+                            <div className="d-flex flex-column">
+                                <Link className={cx('pay')}>Chính sách giao hàng</Link>
+                            </div>
+                        </div >
+                        <hr className="mt-3 mb-3"/>
+                        <div class="footer-bottom d-flex justify-content-between align-items-center">
+                                <p class="footer-copyright">eCommerce. © 2023. All Rights Reserved</p>
+                                <img src="http://porto03.123corp.com.vn/data/upload/payments.png" alt="payment methods" class="footer-payments"/>
                         </div>
-                        <div className="d-flex flex-column">
-                            <Link className={cx('menu')} to={routeConfig.product}>Product</Link>
-                        </div>
-                        <div className="d-flex flex-column">
-                            <Link className={cx('menu')} to={routeConfig.about}>About</Link>
-                        </div>
-                        <div className="d-flex flex-column">
-                            <Link  className={cx('menu')}to={routeConfig.contact}>Contact</Link>
-                        </div>
-                   </div >
-                    <div className="d-flex flex-column col-3">
-                        <h5>Chính sách</h5>
-                        <div className="d-flex flex-column">
-                            <Link className={cx('pay')}>Hướng dẫn thanh toán</Link>
-                        </div>
-                        <div className="d-flex flex-column">
-                            <Link className={cx('pay')}>Chính sách đổi trả hàng</Link>
-                        </div>
-                        <div className="d-flex flex-column">
-                            <Link className={cx('pay')}>Chính sách giao hàng</Link>
-                        </div>
-                    </div >
+                   </di >
+                   
               </div>
             </div>  
         </div>

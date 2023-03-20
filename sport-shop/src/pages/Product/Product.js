@@ -70,14 +70,14 @@ function Product() {
         addToCart(product);
       }
     return (
-            <div className=" wrapper container mt-3">
-                <div className="row">
+            <div className="main mt-3">
+                <div className="row d-flex justify-content-between">
                     <ProductOption/>
-                    <div className="col-8 p-3 m-1">
+                    <div className="col-8 mt-1">
                         <div className="d-flex justify-content-between">
                             <span className="fs-5 fw-bold">Hiện thị sản phẩm</span>
                             <div className="btn-search">
-                                <input className="search" type="text" placeholder="Tìm kiếm..." />
+                                <input className="search" type="" placeholder="Tìm kiếm..." />
                                 <FontAwesomeIcon className="searchicon" icon={faSearch} />
                             </div>
                         </div>

@@ -1,17 +1,22 @@
-.wrapper.container.mt-3{
+/* .wrapper.container.mt-3{
     background-color:white;
-    height: 600px;
+     height: 600px;
     overflow-y: scroll;
     border-radius: 10px;
     box-shadow: inset;
     position: relative;
+}*/
+.main{
+    margin: 0 100px;
+    overflow-y:scroll;
+    max-height: 600px;
 }
 .col-3.p-3.m-2{
 }
 
 .col-8.p-3.m-1{
-    position: absolute;
-    margin-left: 400px !important;
+    /* position: absolute; */
+    /* margin-left: 400px !important; */
 }
 .w-75.p-2{
     border-radius: 20px;
@@ -26,11 +31,14 @@
     border: 1px solid crimson;
     border-radius: 10px;
     overflow: hidden;
+    background-color: white;
     
 }
 .btn-search{
     position: relative;
-    overflow: hidden;
+    overflow: none;
+    background-color:transparent;
+    z-index: -1;
 }
 .searchicon{
     color: crimson;
