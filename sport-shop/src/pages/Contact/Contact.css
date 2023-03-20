@@ -1,0 +1,38 @@
+.row.d-flex.justify-content-center{
+    background-color: white;
+}
+.location-icon,.phone-icon,.mail-icon{
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border: 1px solid crimson;
+    border-radius: 50%;
+    display: flex; justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.contact-logo{
+    margin-left: 50px;
+}
+.contact-main{
+    padding: 0 100px !important;
+}
+.text{
+    margin-left: 15px;
+}
+.footer-contact{
+    height: 150px;
+    background-color: gray;
+    margin: 0 100px !important;
+}
+.title-footer-contact{
+    margin: 0 150px;
+}
+.title-footer-contact input{
+    height: 45px;
+    width: 300px;
+    border-radius: 10px;
+    border: 1px solid crimson;
+    outline: none;
+    padding: 5px 15px;
+}
