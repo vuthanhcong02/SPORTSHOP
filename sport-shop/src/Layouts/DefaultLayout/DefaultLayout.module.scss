@@ -6,10 +6,13 @@
     position: fixed;
     width: 100%;
     background-color: white;
+    z-index: 9999;
 }
 .content{
     padding-top: 100px;
+    position: relative;
+    z-index: 1;
 }
 .footer{
-   
+    
 }

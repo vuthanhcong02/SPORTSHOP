@@ -127,7 +127,7 @@ function DefaultLayout({children}) {
                  {children}
                  </CartContext.Provider>
             </div>
-            <div className="footer">
+            <div className={cx('footer')}>
                 <Footer/>
             </div>
         </div>

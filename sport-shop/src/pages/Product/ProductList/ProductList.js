@@ -1,6 +1,8 @@
 import './ProductList.css';
-import { memo } from 'react';
+import { memo} from 'react';
+import ShowMoreText from 'react-show-more-text';
 function ProductItem({products ,handleAdd}) {
+
     return (
         <>
             {products.map((product,index) => (
@@ -10,7 +12,18 @@ function ProductItem({products ,handleAdd}) {
                     </div>
                     <div className="col-6">
                         <span className="name-product fs-4">{product.name}</span>
-                        <p className="decription">{product.decription}</p>
+                        {/* <p className="decription">{product.decription.slice(0,150)}. . .  </p> */}
+                        <ShowMoreText
+                            lines={3}
+                            more='  Xem thêm'
+                            less='  Thu gọn'
+                            className="content-css"
+                            anchorClass='show-more-less-clickable'
+                            onClick={() => {}}
+                            expanded={false}
+                            width={280}
+                        >{product.decription}
+                        </ShowMoreText>
                     </div>
                     <div className="price col-3 d-flex justify-content-evenly flex-column">
                         <span className="text-center fs-5">{product.price} VND</span>
