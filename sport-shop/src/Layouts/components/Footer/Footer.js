@@ -54,7 +54,7 @@ function Footer() {
                             <p>Mon - Sun / 9:00AM - 8:00PM</p>
                         </div>
                    </div >
-                   <di className="col-7 row">
+                   <div className="col-7 row">
                        <div className="d-flex flex-column col-4">
                             <h5>Tiện ích</h5>
                             <div className="d-flex flex-column">
@@ -87,7 +87,7 @@ function Footer() {
                                 <p class="footer-copyright">eCommerce. © 2023. All Rights Reserved</p>
                                 <img src="http://porto03.123corp.com.vn/data/upload/payments.png" alt="payment methods" class="footer-payments"/>
                         </div>
-                   </di >
+                   </div >
                    
               </div>
             </div>  

@@ -1,3 +1,42 @@
 .carousel{
     
 }
+.tab{
+    background-color: white;
+    border: none;
+    outline: none;
+    padding: 10px;
+    margin: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.display{
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.timkiem{
+    margin-right: 14px;
+}
+.timkiem input{
+    outline: none;
+    padding: 0 15px;
+    border: 1px solid crimson;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.timkiem button{
+    background-color: white;
+    outline: none;
+    border: 1px solid crimson;
+    height: 40px;
+    padding: 0 15px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.timkiem button:hover{
+    background-color: crimson;
+    color: white;
+}

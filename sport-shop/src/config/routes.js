@@ -4,5 +4,6 @@ const routeConfig = {
     about: '/about',
     contact: '/contact',
     cart: '/cart',
+    inforProduct:'/inforproduct'
 };
 export default routeConfig;

@@ -1,0 +1,6 @@
+.card{
+    margin: 10px 15px;
+}
+.card:hover{
+    border: 1px solid black;
+}

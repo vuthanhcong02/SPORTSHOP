@@ -77,7 +77,7 @@ function Product() {
                         <div className="d-flex justify-content-between">
                             <span className="fs-5 fw-bold">Hiện thị sản phẩm</span>
                             <div className="btn-search">
-                                <input className="search" type="" placeholder="Tìm kiếm..." />
+                                <input className="search" type='text' placeholder="Tìm kiếm..." />
                                 <FontAwesomeIcon className="searchicon" icon={faSearch} />
                             </div>
                         </div>

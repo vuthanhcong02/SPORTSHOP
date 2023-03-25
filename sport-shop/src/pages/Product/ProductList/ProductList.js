@@ -12,7 +12,6 @@ function ProductItem({products ,handleAdd}) {
                     </div>
                     <div className="col-6">
                         <span className="name-product fs-4">{product.name}</span>
-                        {/* <p className="decription">{product.decription.slice(0,150)}. . .  </p> */}
                         <ShowMoreText
                             lines={3}
                             more='  Xem thêm'
