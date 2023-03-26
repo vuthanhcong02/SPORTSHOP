@@ -12,7 +12,7 @@ const publicRouter = [
     { path: routeConfig.about, component: About },
     { path: routeConfig.contact, component: Contact },
     { path: routeConfig.cart, component: Cart},
-    { path: routeConfig.inforProduct, component: InforProduct},
+    { path:  `${routeConfig.inforProduct}/:productId`, component: InforProduct},
 ];
 const privateRouter = [];
 export { publicRouter, privateRouter };
