@@ -1,9 +1,30 @@
 import { useParams } from "react-router-dom";
 import Mockdata from "../MockDataProduct/Mockdata";
+import { useState } from "react";
 function InforProduct() {
     const { productId } = useParams();
-    const product = Mockdata.find((p) => p.id===parseInt(productId))
-
+    const [activeSize,setActiveSize]=useState('')
+    const product = Mockdata.find((p)=>{
+        if((p) => p.id===parseInt(productId)){
+            if((!p.hasOwnProperty('quantity'))) {
+                p.quantity = 1; //hasOwnProperty để kiểm tra xem đối tượng sản phẩm đã có thuộc tính quantity hay chưa. Nếu chưa có, ta sẽ thêm thuộc tính quantity vào đối tượng sản phẩm và gán giá trị mặc định bằng 1. 
+              }
+              return true;
+            }
+            return false;
+    })
+    const [quantity,setQuantity]=useState(product.quantity)
+    const handleDecrease=()=>{
+        if(quantity>1){
+            setQuantity(prev=>prev-1)
+        }
+        else{
+            return
+        }
+    }
+    const handleIncrease=()=>{
+        setQuantity(prev=>prev+1)
+    }
     return ( 
         <div className="container mt-3 p-3">
                 <h5 className="mt-2 p-3">Thông tin sản phẩm #{product.id}</h5>
@@ -18,22 +39,22 @@ function InforProduct() {
                         <div>
                             <span>Số lượng : </span>
                            <div className="d-flex justify-content-start align-items-center mt-2">
-                                <button className="btn btn-outline-danger">-</button>
-                                <span className="p-3">1</span>
-                                <button className="btn btn-outline-danger">+</button>
+                                <button className="btn btn-outline-danger m-2" onClick={handleDecrease}>-</button>
+                                <span className="">{quantity}</span>
+                                <button className="btn btn-outline-danger m-2" onClick={handleIncrease}>+</button>
                            </div>
                         </div>
                         <div>
                             <span>Kích cỡ : </span>
                             <div className="d-flex mt-2">
-                                <button className="btn btn-outline-danger m-2">S</button>
-                                <button className="btn btn-outline-danger m-2">M</button>
-                                <button className="btn btn-outline-danger m-2">L</button>
-                                <button className="btn btn-outline-danger m-2">XL</button>
-                                <button className="btn btn-outline-danger m-2">XXL</button>
+                                <button style={activeSize==='S'?{backgroundColor:"crimson",color:"white"}:{}} className="btn btn-outline-danger m-2" onClick={()=>setActiveSize('S')}>S</button>
+                                <button style={activeSize==='M'?{backgroundColor:"crimson",color:"white"}:{}} className="btn btn-outline-danger m-2" onClick={()=>setActiveSize('M')}>M</button>
+                                <button style={activeSize==='L'?{backgroundColor:"crimson",color:"white"}:{}} className="btn btn-outline-danger m-2"  onClick={()=>setActiveSize('L')}>L</button>
+                                <button style={activeSize==='XL'?{backgroundColor:"crimson",color:"white"}:{}} className="btn btn-outline-danger m-2" onClick={()=>setActiveSize('XL')}>XL</button>
+                                <button style={activeSize==='XXL'?{backgroundColor:"crimson",color:"white"}:{}} className="btn btn-outline-danger m-2" onClick={()=>setActiveSize('XXL')}>XXL</button>
                             </div>
                         </div>
-                        <button className=" mt-5 w-50 btn btn-outline-danger">Thêm vào giỏ hàng</button>
+                        <button className="m-2 mt-5 w-50 btn btn-outline-danger">Thêm vào giỏ hàng</button>
                    </div >
                 </div>
         </div>
