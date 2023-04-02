@@ -1,11 +1,13 @@
 import { useParams } from "react-router-dom";
 import Mockdata from "../MockDataProduct/Mockdata";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { CartContext } from "../../DefaultLayout/DefaultLayout";
 function InforProduct() {
     const { productId } = useParams();
     const [activeSize,setActiveSize]=useState('')
+    const {addToCart}=useContext(CartContext)
     const product = Mockdata.find((p)=>{
-        if((p) => p.id===parseInt(productId)){
+        if(p.id===parseInt(productId)){
             if((!p.hasOwnProperty('quantity'))) {
                 p.quantity = 1; //hasOwnProperty để kiểm tra xem đối tượng sản phẩm đã có thuộc tính quantity hay chưa. Nếu chưa có, ta sẽ thêm thuộc tính quantity vào đối tượng sản phẩm và gán giá trị mặc định bằng 1. 
               }
@@ -54,7 +56,7 @@ function InforProduct() {
                                 <button style={activeSize==='XXL'?{backgroundColor:"crimson",color:"white"}:{}} className="btn btn-outline-danger m-2" onClick={()=>setActiveSize('XXL')}>XXL</button>
                             </div>
                         </div>
-                        <button className="m-2 mt-5 w-50 btn btn-outline-danger">Thêm vào giỏ hàng</button>
+                        <button className="m-2 mt-5 w-50 btn btn-outline-danger" onClick={()=>addToCart(product)}>Thêm vào giỏ hàng</button>
                    </div >
                 </div>
         </div>
